@@ -1,0 +1,929 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "",
+    "title": "accounts",
+    "version": "1.0.0"
+  },
+
+  "tags": [],
+  "paths": {
+    "/accounts": {
+      "get": {
+        "summary": "Get all instances of Accounts",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Accounts"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        },
+        "security": [
+          {
+            "APIKey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create a new instance of Accounts",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "description": "Accounts content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Accounts"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The resource has been created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Accounts"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    },
+    "/accounts/{id}": {
+      "get": {
+        "summary": "Retrieve the specified instance of Accounts by id",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Accounts"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete the specified instance of Accounts by id",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The resource has been removed"
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update the specified instance of Accounts by id",
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Accounts content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Accounts"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Accounts"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    },
+    "/accounts/{id}/customer": {
+      "post": {
+        "summary": "Create a new instance of Customer",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Customer content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The resource has been created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    },
+    "/accounts/{id}/customer/{customerId}": {
+      "get": {
+        "summary": "Retrieve the specified instance of Customer by customerId",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "customerId",
+            "description": "id of the Customer",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete the specified instance of Customer by customerId",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "customerId",
+            "description": "id of the Customer",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The resource has been removed"
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update the specified instance of Customer by customerId",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "customerId",
+            "description": "id of the Customer",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Customer content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    },
+    "/accounts/{id}/balance": {
+      "post": {
+        "summary": "Create a new instance of Balance",
+        "tags": [
+          "Balance"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Balance content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Balance"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The resource has been created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Balance"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    },
+    "/accounts/{id}/balance/{balanceId}": {
+      "get": {
+        "summary": "Retrieve the specified instance of Balance by balanceId",
+        "tags": [
+          "Balance"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "balanceId",
+            "description": "id of the Balance",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Balance"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete the specified instance of Balance by balanceId",
+        "tags": [
+          "Balance"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "balanceId",
+            "description": "id of the Balance",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The resource has been removed"
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update the specified instance of Balance by balanceId",
+        "tags": [
+          "Balance"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of the Accounts",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "balanceId",
+            "description": "id of the Balance",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Balance content",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Balance"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Balance"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "504": {
+            "$ref": "#/components/responses/504"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Accounts": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "description": "Timestamp this account was created",
+            "example": "2022-04-01T15:44.01"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name given by the customer to this account",
+            "example": "Family account"
+          },
+          "accountType": {
+            "type": "string",
+            "description": "",
+            "example": "Personal"
+          },
+          "currency": {
+            "type": "string",
+            "description": "",
+            "example": "GBP"
+          }
+        }
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": ""
+          },
+          "lastname": {
+            "type": "string",
+            "description": ""
+          },
+          "firstname": {
+            "type": "string",
+            "description": "",
+            "example": "Nico"
+          }
+        }
+      },
+      "Balance": {
+        "type": "object",
+        "properties": {
+          "effectiveBalance": {
+            "type": "object",
+            "properties": {
+              "minorUnit": {
+                "type": "string",
+                "description": "",
+                "example": "1245.3"
+              },
+              "currency": {
+                "type": "string",
+                "description": "",
+                "example": "GBP"
+              }
+            }
+          },
+          "date": {
+            "type": "string",
+            "description": "",
+            "example": "2022-04-01"
+          },
+          "amount": {
+            "type": "object",
+            "properties": {
+              "currency": {
+                "type": "string",
+                "description": "",
+                "example": "GBP"
+              },
+              "minorUnit": {
+                "type": "string",
+                "description": "",
+                "example": "1100.00"
+              }
+            }
+          },
+          "pendingTransactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "currency": {
+                  "type": "string",
+                  "description": "",
+                  "example": "GBP"
+                },
+                "minorUnit": {
+                  "type": "string",
+                  "description": "",
+                  "example": "120"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "BAD_REQUEST"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "Bad request in body/params/headers"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "UNAUTHORIZED"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "Authentication error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "FORBIDDEN"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "You cannot access this resource"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "RESOURCE_NOT_FOUND"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "The resource with id XX cannot be found"
+                }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "UNEXPECTED_SERVER_ERROR"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "The server encountered an error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "504": {
+        "description": "Gateway Timeout",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorCode": {
+                  "type": "string",
+                  "enum": [
+                    "REQUEST_TIMEOUT"
+                  ]
+                },
+                "errorDescription": {
+                  "type": "string",
+                  "example": "The server encountered a timeout"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes":{
+      "APIKey" : {
+        "type": "apiKey",
+        "name": "api-key",
+        "in": "query"
+      }
+    }
+  }
+}
