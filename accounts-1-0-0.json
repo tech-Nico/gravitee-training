@@ -1,0 +1,784 @@
+{
+  "name": "accounts",
+  "crossId": "cdcec947-d614-4ac8-8ec9-47d6149ac8ae",
+  "version": "1.0.0",
+  "description": "",
+  "visibility": "PRIVATE",
+  "gravitee": "2.0.0",
+  "flow_mode": "DEFAULT",
+  "flows": [
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "GET"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Get all instances of Accounts",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"createdAt\" : \"2022-04-01T15:44.01\",\n  \"accountType\" : \"Personal\",\n  \"name\" : \"Family account\",\n  \"currency\" : \"GBP\"\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "POST"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Create a new instance of Accounts",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"createdAt\" : \"2022-04-01T15:44.01\",\n  \"accountType\" : \"Personal\",\n  \"name\" : \"Family account\",\n  \"currency\" : \"GBP\"\n}",
+            "status": "201"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "GET"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Retrieve the specified instance of Accounts by id",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"createdAt\" : \"2022-04-01T15:44.01\",\n  \"accountType\" : \"Personal\",\n  \"name\" : \"Family account\",\n  \"currency\" : \"GBP\"\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "PUT"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Update the specified instance of Accounts by id",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"createdAt\" : \"2022-04-01T15:44.01\",\n  \"accountType\" : \"Personal\",\n  \"name\" : \"Family account\",\n  \"currency\" : \"GBP\"\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "DELETE"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Delete the specified instance of Accounts by id",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "status": "204"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/customer",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "POST"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Create a new instance of Customer",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"firstname\" : \"Nico\",\n  \"id\" : \"Mocked string\",\n  \"lastname\" : \"Mocked string\"\n}",
+            "status": "201"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/customer/:customerId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "GET"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Retrieve the specified instance of Customer by customerId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"firstname\" : \"Nico\",\n  \"id\" : \"Mocked string\",\n  \"lastname\" : \"Mocked string\"\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/customer/:customerId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "PUT"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Update the specified instance of Customer by customerId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"firstname\" : \"Nico\",\n  \"id\" : \"Mocked string\",\n  \"lastname\" : \"Mocked string\"\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/customer/:customerId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "DELETE"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Delete the specified instance of Customer by customerId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "status": "204"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/balance",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "POST"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Create a new instance of Balance",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"date\" : \"2022-04-01\",\n  \"amount\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1100.00\"\n  },\n  \"pendingTransactions\" : [ { } ],\n  \"effectiveBalance\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1245.3\"\n  }\n}",
+            "status": "201"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/balance/:balanceId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "GET"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Retrieve the specified instance of Balance by balanceId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"date\" : \"2022-04-01\",\n  \"amount\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1100.00\"\n  },\n  \"pendingTransactions\" : [ { } ],\n  \"effectiveBalance\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1245.3\"\n  }\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/balance/:balanceId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "PUT"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Update the specified instance of Balance by balanceId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "content": "{\n  \"date\" : \"2022-04-01\",\n  \"amount\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1100.00\"\n  },\n  \"pendingTransactions\" : [ { } ],\n  \"effectiveBalance\" : {\n    \"currency\" : \"GBP\",\n    \"minorUnit\" : \"1245.3\"\n  }\n}",
+            "status": "200"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    },
+    {
+      "name": "",
+      "path-operator": {
+        "path": "/accounts/:id/balance/:balanceId",
+        "operator": "EQUALS"
+      },
+      "condition": "",
+      "consumers": [],
+      "methods": [
+        "DELETE"
+      ],
+      "pre": [
+        {
+          "name": "mock",
+          "description": "Delete the specified instance of Balance by balanceId",
+          "enabled": true,
+          "policy": "mock",
+          "configuration": {
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "status": "204"
+          }
+        }
+      ],
+      "post": [],
+      "enabled": true
+    }
+  ],
+  "resources": [
+    {
+      "name": "Gravitee AM",
+      "type": "oauth2-am-resource",
+      "enabled": true,
+      "configuration": {
+        "useSystemProxy": false,
+        "version": "V3_X",
+        "userClaim": "sub",
+        "serverURL": "https://nico-dev-am-gateway.cloud.gravitee.io",
+        "securityDomain": "/nico",
+        "clientId": "045a41b0-2eee-48fc-9a41-b02eee38fcb8",
+        "clientSecret": "dk0HBBY0dRchv9gOhoNG4Qso86__i3iA5zhKWxn6T9k"
+      }
+    }
+  ],
+  "properties": [],
+  "categories": [
+    "internal"
+  ],
+  "groups": [
+    "Retail Group"
+  ],
+  "members": [
+    {
+      "source": "cockpit",
+      "sourceId": "b02d57aa-061f-4974-ad57-aa061f697411",
+      "roles": [
+        "100d8100-1d24-4853-8d81-001d24085367"
+      ]
+    },
+    {
+      "source": "cockpit",
+      "sourceId": "2e31247f-e27d-47ad-b124-7fe27d47ad17",
+      "roles": [
+        "8c463908-a315-4467-8639-08a315c467ed"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "d5a27664-29a8-4c1b-a276-6429a80c1bdc",
+      "crossId": "6b134738-dad8-462a-9347-38dad8662ae9",
+      "name": "Aside",
+      "type": "SYSTEM_FOLDER",
+      "order": 0,
+      "published": true,
+      "visibility": "PUBLIC",
+      "lastModificationDate": 1650883531841,
+      "contentType": "application/json",
+      "homepage": false,
+      "parentPath": "",
+      "excludedAccessControls": false,
+      "accessControls": [],
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "attached_media": []
+    },
+    {
+      "id": "0d1b1261-8a13-46d8-9b12-618a13c6d86d",
+      "crossId": "ad40e083-2b0e-4dbe-80e0-832b0e2dbe22",
+      "name": "Home page",
+      "type": "MARKDOWN",
+      "content": "# Welcome to ${api.name}\nThis API is currently in \"${api.state}\" state",
+      "order": 1,
+      "lastContributor": "dd18b830-d95e-42e2-98b8-30d95e32e2e4",
+      "published": true,
+      "visibility": "PUBLIC",
+      "lastModificationDate": 1650883532175,
+      "contentType": "text/yaml",
+      "homepage": true,
+      "parentPath": "",
+      "excludedAccessControls": false,
+      "accessControls": [],
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "attached_media": []
+    },
+    {
+      "id": "31260c9a-35ff-4954-a60c-9a35ff495425",
+      "crossId": "c4ded6d2-2281-4706-9ed6-d222812706fc",
+      "name": "Swagger",
+      "type": "SWAGGER",
+      "content": "{\n  \"openapi\": \"3.0.0\",\n  \"info\": {\n    \"description\": \"\",\n    \"title\": \"accounts\",\n    \"version\": \"1.0.0\"\n  },\n\n  \"tags\": [],\n  \"paths\": {\n    \"/accounts\": {\n      \"get\": {\n        \"summary\": \"Get all instances of Accounts\",\n        \"tags\": [\n          \"Accounts\"\n        ],\n        \"parameters\": [],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Accounts\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        },\n        \"security\": [\n          {\n            \"APIKey\": []\n          }\n        ]\n      },\n      \"post\": {\n        \"summary\": \"Create a new instance of Accounts\",\n        \"tags\": [\n          \"Accounts\"\n        ],\n        \"parameters\": [],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Accounts content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Accounts\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"The resource has been created\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Accounts\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    },\n    \"/accounts/{id}\": {\n      \"get\": {\n        \"summary\": \"Retrieve the specified instance of Accounts by id\",\n        \"tags\": [\n          \"Accounts\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Accounts\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"delete\": {\n        \"summary\": \"Delete the specified instance of Accounts by id\",\n        \"tags\": [\n          \"Accounts\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"204\": {\n            \"description\": \"The resource has been removed\"\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"put\": {\n        \"summary\": \"Update the specified instance of Accounts by id\",\n        \"tags\": [\n          \"Accounts\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Accounts content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Accounts\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Accounts\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    },\n    \"/accounts/{id}/customer\": {\n      \"post\": {\n        \"summary\": \"Create a new instance of Customer\",\n        \"tags\": [\n          \"Customer\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Customer content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Customer\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"The resource has been created\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Customer\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    },\n    \"/accounts/{id}/customer/{customerId}\": {\n      \"get\": {\n        \"summary\": \"Retrieve the specified instance of Customer by customerId\",\n        \"tags\": [\n          \"Customer\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"customerId\",\n            \"description\": \"id of the Customer\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Customer\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"delete\": {\n        \"summary\": \"Delete the specified instance of Customer by customerId\",\n        \"tags\": [\n          \"Customer\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"customerId\",\n            \"description\": \"id of the Customer\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"204\": {\n            \"description\": \"The resource has been removed\"\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"put\": {\n        \"summary\": \"Update the specified instance of Customer by customerId\",\n        \"tags\": [\n          \"Customer\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"customerId\",\n            \"description\": \"id of the Customer\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Customer content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Customer\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Customer\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    },\n    \"/accounts/{id}/balance\": {\n      \"post\": {\n        \"summary\": \"Create a new instance of Balance\",\n        \"tags\": [\n          \"Balance\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Balance content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Balance\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"201\": {\n            \"description\": \"The resource has been created\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Balance\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    },\n    \"/accounts/{id}/balance/{balanceId}\": {\n      \"get\": {\n        \"summary\": \"Retrieve the specified instance of Balance by balanceId\",\n        \"tags\": [\n          \"Balance\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"balanceId\",\n            \"description\": \"id of the Balance\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Balance\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"delete\": {\n        \"summary\": \"Delete the specified instance of Balance by balanceId\",\n        \"tags\": [\n          \"Balance\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"balanceId\",\n            \"description\": \"id of the Balance\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"204\": {\n            \"description\": \"The resource has been removed\"\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      },\n      \"put\": {\n        \"summary\": \"Update the specified instance of Balance by balanceId\",\n        \"tags\": [\n          \"Balance\"\n        ],\n        \"parameters\": [\n          {\n            \"in\": \"path\",\n            \"name\": \"id\",\n            \"description\": \"id of the Accounts\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"in\": \"path\",\n            \"name\": \"balanceId\",\n            \"description\": \"id of the Balance\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"required\": true,\n          \"description\": \"Balance content\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Balance\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"OK\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Balance\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"$ref\": \"#/components/responses/400\"\n          },\n          \"401\": {\n            \"$ref\": \"#/components/responses/401\"\n          },\n          \"403\": {\n            \"$ref\": \"#/components/responses/403\"\n          },\n          \"500\": {\n            \"$ref\": \"#/components/responses/500\"\n          },\n          \"504\": {\n            \"$ref\": \"#/components/responses/504\"\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"Accounts\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"createdAt\": {\n            \"type\": \"string\",\n            \"description\": \"Timestamp this account was created\",\n            \"example\": \"2022-04-01T15:44.01\"\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"Name given by the customer to this account\",\n            \"example\": \"Family account\"\n          },\n          \"accountType\": {\n            \"type\": \"string\",\n            \"description\": \"\",\n            \"example\": \"Personal\"\n          },\n          \"currency\": {\n            \"type\": \"string\",\n            \"description\": \"\",\n            \"example\": \"GBP\"\n          }\n        }\n      },\n      \"Customer\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"string\",\n            \"description\": \"\"\n          },\n          \"lastname\": {\n            \"type\": \"string\",\n            \"description\": \"\"\n          },\n          \"firstname\": {\n            \"type\": \"string\",\n            \"description\": \"\",\n            \"example\": \"Nico\"\n          }\n        }\n      },\n      \"Balance\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"effectiveBalance\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"minorUnit\": {\n                \"type\": \"string\",\n                \"description\": \"\",\n                \"example\": \"1245.3\"\n              },\n              \"currency\": {\n                \"type\": \"string\",\n                \"description\": \"\",\n                \"example\": \"GBP\"\n              }\n            }\n          },\n          \"date\": {\n            \"type\": \"string\",\n            \"description\": \"\",\n            \"example\": \"2022-04-01\"\n          },\n          \"amount\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"currency\": {\n                \"type\": \"string\",\n                \"description\": \"\",\n                \"example\": \"GBP\"\n              },\n              \"minorUnit\": {\n                \"type\": \"string\",\n                \"description\": \"\",\n                \"example\": \"1100.00\"\n              }\n            }\n          },\n          \"pendingTransactions\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"currency\": {\n                  \"type\": \"string\",\n                  \"description\": \"\",\n                  \"example\": \"GBP\"\n                },\n                \"minorUnit\": {\n                  \"type\": \"string\",\n                  \"description\": \"\",\n                  \"example\": \"120\"\n                }\n              }\n            }\n          }\n        }\n      }\n    },\n    \"responses\": {\n      \"400\": {\n        \"description\": \"Bad Request\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"BAD_REQUEST\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"Bad request in body/params/headers\"\n                }\n              }\n            }\n          }\n        }\n      },\n      \"401\": {\n        \"description\": \"Unauthorized\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"UNAUTHORIZED\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"Authentication error\"\n                }\n              }\n            }\n          }\n        }\n      },\n      \"403\": {\n        \"description\": \"Forbidden\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"FORBIDDEN\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"You cannot access this resource\"\n                }\n              }\n            }\n          }\n        }\n      },\n      \"404\": {\n        \"description\": \"Not Found\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"RESOURCE_NOT_FOUND\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"The resource with id XX cannot be found\"\n                }\n              }\n            }\n          }\n        }\n      },\n      \"500\": {\n        \"description\": \"Internal Server Error\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"UNEXPECTED_SERVER_ERROR\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"The server encountered an error\"\n                }\n              }\n            }\n          }\n        }\n      },\n      \"504\": {\n        \"description\": \"Gateway Timeout\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"errorCode\": {\n                  \"type\": \"string\",\n                  \"enum\": [\n                    \"REQUEST_TIMEOUT\"\n                  ]\n                },\n                \"errorDescription\": {\n                  \"type\": \"string\",\n                  \"example\": \"The server encountered a timeout\"\n                }\n              }\n            }\n          }\n        }\n      }\n    },\n    \"securitySchemes\":{\n      \"APIKey\" : {\n        \"type\": \"apiKey\",\n        \"name\": \"api-key\",\n        \"in\": \"query\"\n      }\n    }\n  }\n}",
+      "order": 2,
+      "lastContributor": "dd18b830-d95e-42e2-98b8-30d95e32e2e4",
+      "published": true,
+      "visibility": "PUBLIC",
+      "lastModificationDate": 1652686245171,
+      "contentType": "application/json",
+      "configuration": {
+        "viewer": "Swagger",
+        "tryIt": "true",
+        "showURL": "true",
+        "displayOperationId": "true",
+        "enableFiltering": "true",
+        "showExtensions": "true",
+        "showCommonExtensions": "true",
+        "tryItAnonymous": "false",
+        "entrypointAsBasePath": "false",
+        "entrypointsAsServers": "true",
+        "tryItURL": "https://nico-dev-apim-gateway.cloud.gravitee.io"
+      },
+      "homepage": false,
+      "parentPath": "",
+      "excludedAccessControls": false,
+      "accessControls": [],
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "attached_media": []
+    }
+  ],
+  "plans": [
+    {
+      "id": "0d218d88-c21c-4f4b-a18d-88c21c7f4b3b",
+      "crossId": "9e67a7a7-fa09-49b9-a7a7-a7fa0969b9a0",
+      "name": "Free",
+      "description": "Free plan",
+      "validation": "AUTO",
+      "security": "KEY_LESS",
+      "securityDefinition": "{}",
+      "type": "API",
+      "status": "PUBLISHED",
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "order": 1,
+      "characteristics": [],
+      "created_at": 1649320714088,
+      "updated_at": 1650883529754,
+      "published_at": 1649320752787,
+      "paths": {},
+      "flows": [
+        {
+          "name": "",
+          "path-operator": {
+            "path": "/",
+            "operator": "STARTS_WITH"
+          },
+          "condition": "",
+          "consumers": [],
+          "methods": [],
+          "pre": [
+            {
+              "name": "IPFiltering",
+              "description": "",
+              "enabled": false,
+              "policy": "ip-filtering",
+              "configuration": {
+                "whitelistIps": [
+                  "10.0.0.1"
+                ]
+              }
+            },
+            {
+              "name": "Rate Limiting",
+              "description": "Rate limit how many HTTP requests an application can make in a given period of seconds or minutes",
+              "enabled": true,
+              "policy": "rate-limit",
+              "configuration": {
+                "async": false,
+                "addHeaders": false,
+                "rate": {
+                  "periodTime": 3,
+                  "limit": 2,
+                  "periodTimeUnit": "SECONDS",
+                  "key": ""
+                }
+              }
+            },
+            {
+              "name": "Resource Filtering",
+              "description": "Restrict resources according to whitelist and / or blacklist rules",
+              "enabled": true,
+              "policy": "resource-filtering",
+              "configuration": {
+                "blacklist": [],
+                "whitelist": [
+                  {
+                    "methods": [
+                      "GET"
+                    ],
+                    "pattern": "/accounts/*"
+                  }
+                ]
+              }
+            }
+          ],
+          "post": [],
+          "enabled": true
+        }
+      ],
+      "comment_required": false
+    },
+    {
+      "id": "a4497d4d-3c08-4655-897d-4d3c08365531",
+      "crossId": "15bb035a-6e81-4e24-bb03-5a6e816e24b4",
+      "name": "API-Key plan",
+      "description": "API-Key plan",
+      "validation": "MANUAL",
+      "security": "API_KEY",
+      "securityDefinition": "{\"propagateApiKey\":true}",
+      "type": "API",
+      "status": "PUBLISHED",
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "order": 3,
+      "characteristics": [],
+      "created_at": 1652441100243,
+      "updated_at": 1652860767615,
+      "published_at": 1652441105126,
+      "paths": {},
+      "flows": [
+        {
+          "name": "",
+          "path-operator": {
+            "path": "/",
+            "operator": "STARTS_WITH"
+          },
+          "condition": "",
+          "consumers": [],
+          "methods": [],
+          "pre": [
+            {
+              "name": "Rate Limiting",
+              "description": "Rate limit how many HTTP requests an application can make in a given period of seconds or minutes",
+              "enabled": true,
+              "policy": "rate-limit",
+              "configuration": {
+                "async": false,
+                "addHeaders": false,
+                "rate": {
+                  "periodTime": 2,
+                  "limit": 2,
+                  "periodTimeUnit": "SECONDS",
+                  "key": ""
+                }
+              }
+            }
+          ],
+          "post": [],
+          "enabled": false
+        }
+      ],
+      "comment_required": false
+    },
+    {
+      "id": "5ccebe9f-69b1-4a12-8ebe-9f69b1da12c7",
+      "crossId": "5bb6bf74-e51f-41c5-b6bf-74e51fc1c559",
+      "name": "OAuth plan",
+      "description": "OAuth plan",
+      "validation": "MANUAL",
+      "security": "OAUTH2",
+      "securityDefinition": "{\"extractPayload\":true,\"checkRequiredScopes\":false,\"modeStrict\":true,\"propagateAuthHeader\":true,\"oauthResource\":\"Gravitee AM\"}",
+      "type": "API",
+      "status": "PUBLISHED",
+      "api": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+      "order": 2,
+      "characteristics": [],
+      "created_at": 1649320748066,
+      "updated_at": 1650883530918,
+      "published_at": 1649320758679,
+      "paths": {},
+      "flows": [
+        {
+          "name": "",
+          "path-operator": {
+            "path": "/",
+            "operator": "STARTS_WITH"
+          },
+          "condition": "",
+          "consumers": [],
+          "methods": [],
+          "pre": [],
+          "post": [],
+          "enabled": true
+        }
+      ],
+      "comment_required": false
+    }
+  ],
+  "metadata": [
+    {
+      "key": "email-support",
+      "name": "email-support",
+      "format": "MAIL",
+      "value": "${(api.primaryOwner.email)!''}",
+      "defaultValue": "support@change.me",
+      "apiId": "4b38ba99-6a6f-4d5e-a40c-ad3514005850"
+    }
+  ],
+  "id": "4b38ba99-6a6f-4d5e-a40c-ad3514005850",
+  "path_mappings": [
+    "/"
+  ],
+  "proxy": {
+    "virtual_hosts": [
+      {
+        "path": "/accounts"
+      }
+    ],
+    "strip_context_path": false,
+    "preserve_host": false,
+    "logging": {
+      "mode": "CLIENT_PROXY",
+      "content": "HEADERS_PAYLOADS",
+      "scope": "REQUEST_RESPONSE"
+    },
+    "groups": [
+      {
+        "name": "default-group",
+        "endpoints": [
+          {
+            "backup": false,
+            "name": "default",
+            "weight": 1,
+            "type": "http",
+            "target": "https://jsonplaceholder.typicode.com/posts"
+          }
+        ],
+        "load_balancing": {
+          "type": "ROUND_ROBIN"
+        },
+        "http": {
+          "connectTimeout": 5000,
+          "idleTimeout": 60000,
+          "keepAlive": true,
+          "readTimeout": 10000,
+          "pipelining": false,
+          "maxConcurrentConnections": 100,
+          "useCompression": true,
+          "followRedirects": false
+        }
+      }
+    ],
+    "cors": {
+      "enabled": true,
+      "allowCredentials": true,
+      "allowOrigin": [
+        "*"
+      ],
+      "allowHeaders": [
+        "content-type",
+        "authorization"
+      ],
+      "allowMethods": [
+        "TRACE",
+        "HEAD",
+        "DELETE",
+        "POST",
+        "GET",
+        "OPTIONS",
+        "PATCH",
+        "PUT"
+      ],
+      "exposeHeaders": [],
+      "maxAge": -1
+    }
+  },
+  "response_templates": {},
+  "primaryOwner": {
+    "id": "dd18b830-d95e-42e2-98b8-30d95e32e2e4",
+    "email": "nico.balestra@graviteesource.com",
+    "displayName": "Nico Balestra",
+    "type": "USER"
+  }
+}
