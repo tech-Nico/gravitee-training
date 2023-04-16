@@ -5,7 +5,17 @@
     "title": "accounts",
     "version": "1.0.0"
   },
-
+  "servers": [
+    {
+      "url": "https://dev.apim.gateway.giotraining.nl.az.gravitee.cloud/{basePath}",
+      "description": "The accounts API server",
+      "variables": {
+        "basePath": {
+          "default": "training"
+        }
+      }
+    }
+  ],
   "tags": [],
   "paths": {
     "/accounts": {
